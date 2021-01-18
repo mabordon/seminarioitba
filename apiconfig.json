@@ -1,0 +1,16 @@
+{
+
+        "url":"https://community-open-weather-map.p.rapidapi.com/weather",     
+      
+        "querystring":{"q":"Hurlingham,AR","units":"metric","mode":"xml, html"},
+        "headers": {
+        
+                  "x-rapidapi-key": "468f118bbamshed4da57e8ee105dp10ae11jsnd8257ff20f2f",
+                  "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
+                 
+              
+                   }
+
+    
+    
+}
