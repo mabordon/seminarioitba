@@ -1,13 +1,15 @@
 import db
 from weatherapi import WeatherApi
 from models import Weather
+from apscheduler.schedulers.background import BlockingScheduler
 import json
- 
-if __name__ == '__main__':
+import time
+
+def load_table():
+  try:
     feeder=WeatherApi()
-
-
     response=feeder.get_weather_info()
+    print(response.text)
     data=json.loads(response.text)
     weather=data["weather"][0]["main"]
     temperature = data["main"]["temp"]
@@ -25,4 +27,13 @@ if __name__ == '__main__':
                     pressure, humidity,visibility,windspeed,winddeg,
                     cloudiness,dt)
     w.save()
+    print(f"Ejecutando la inserción {time.ctime()}")
+  except Exception as e:
+                  print(e) 
+
+ 
+if __name__ == '__main__':        
+          sched = BlockingScheduler()
+          sched.add_job(load_table, 'interval', seconds =1800) #will do the print_t work for every 60 seconds
+          sched.start()
 
