@@ -34,6 +34,6 @@ def load_table():
  
 if __name__ == '__main__':        
           sched = BlockingScheduler()
-          sched.add_job(load_table, 'interval', seconds =1800) #will do the print_t work for every 60 seconds
+          sched.add_job(load_table, 'interval', seconds =1800)
           sched.start()
 
