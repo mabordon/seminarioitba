@@ -4,12 +4,14 @@ from models import Weather
 from apscheduler.schedulers.background import BlockingScheduler
 import json
 import time
+from itbatools import get_itba_logger
+
+logger=get_itba_logger("feeder",screen=False)
 
 def load_table():
-  try:
+  try:    
     feeder=WeatherApi()
-    response=feeder.get_weather_info()
-    print(response.text)
+    response=feeder.get_weather_info() 
     data=json.loads(response.text)
     weather=data["weather"][0]["main"]
     temperature = data["main"]["temp"]
@@ -26,10 +28,11 @@ def load_table():
     w=Weather(weather,temperature,tempmin,tempmax,feelslike, 
                     pressure, humidity,visibility,windspeed,winddeg,
                     cloudiness,dt)
-    w.save()
-    print(f"Ejecutando la inserción {time.ctime()}")
+    w.save() 
+    logger.info(f"Ejecutando la inserción {time.ctime()} de {response.text}")
+
   except Exception as e:
-                  print(e) 
+                      logger.error(e)
 
  
 if __name__ == '__main__':        
