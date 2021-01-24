@@ -3,7 +3,6 @@ from weatherapi import WeatherApi
 from models import Weather
 from apscheduler.schedulers.background import BlockingScheduler
 import json
-import time
 from itbatools import get_itba_logger
 
 logger=get_itba_logger("feeder",screen=False)
@@ -29,7 +28,7 @@ def load_table():
                     pressure, humidity,visibility,windspeed,winddeg,
                     cloudiness,dt)
     w.save() 
-    logger.info(f"Ejecutando la inserción {time.ctime()} de {response.text}")
+    logger.info(f"Ejecutando la inserción de {response.text}")
 
   except Exception as e:
                       logger.error(e)
@@ -37,6 +36,6 @@ def load_table():
  
 if __name__ == '__main__':        
           sched = BlockingScheduler()
-          sched.add_job(load_table, 'interval', seconds =1800)
+          sched.add_job(load_table, 'interval', seconds =60)
           sched.start()
 
