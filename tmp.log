@@ -1,0 +1,5 @@
+[2021-01-23 22:18:34,318] {prueba.py:18} INFO - creating an instance of auxiliary_module.Auxiliary
+[2021-01-23 22:20:23,988] {prueba.py:18} INFO - creating an instance of auxiliary_module.Auxiliary
+[2021-01-23 22:20:23,989] {prueba.py:19} ERROR - Hola Error
+[2021-01-23 22:22:16,863] {prueba.py:18} INFO - creating an instance of auxiliary_module.Auxiliary
+[2021-01-23 22:22:16,864] {prueba.py:19} ERROR - Hola Error
