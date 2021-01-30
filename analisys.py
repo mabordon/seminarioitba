@@ -42,14 +42,19 @@ df_2.index
 
 y = df_2['temperature']
 y.plot(figsize=(15, 6))
-plt.show()
+#plt.show()
+plt.title('Serie de temperaturas cada 30 minutos')
+plt.savefig("serie_temperaturas.png")
+
 
 
 from pylab import rcParams
 rcParams['figure.figsize'] = 10, 10
 decomposition = sm.tsa.seasonal_decompose(y, model='additive', period=43)
 fig = decomposition.plot()
-plt.show()
+plt.title('Descomposición de la serie en Tendencia, Estacionalidad y Ruido')
+#plt.show()
+plt.savefig("descomposicion.png")
 
 ###########################
 #Time series forecasting with ARIMA
@@ -99,6 +104,8 @@ print(results.summary().tables[1])
 
 
 results.plot_diagnostics(figsize=(16, 8))
+plt.title('Ajuste Normal de la distribucion del error')
+plt.savefig("ajuste_normal.png")
 plt.show()
 
 ##################
@@ -120,8 +127,10 @@ ax.fill_between(pred_ci.index,
 ax.set_xlabel('Tiempo')
 ax.set_ylabel('Temperatura')
 plt.legend()
-
+#plt.title('Validación del Forecast')
+#plt.savefig("validacion_forecast.png")
 plt.show()
+
 
 y_forecasted = pred.predicted_mean
 y_truth = y['2021-01-22 04:25:52':]
