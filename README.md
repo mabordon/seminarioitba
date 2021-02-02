@@ -6,16 +6,14 @@
 ### Funcionalidad:
 
 
-Se descompone en **cinco bloques**, los cuales se mencionan a continuación:
+Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
-#### Extracción: 
+#### Extracción/Carga: 
                 
 Consiste en  recuperar información asociada a la temperatura de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos).
 
-#### Carga:
-
-Por cada registro recuperado durante la fase de extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
+Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
 
 #### Análisis:
 
@@ -40,6 +38,18 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario. 
 
 ### Descripción de los componentes por fase:
+
+#### Extracción y Carga:
+
+##### weatherapi.py: Clase utilizada para recuperar la información de la api.
+
+##### apiconfig.json: Archivo Json de configuración de la api OpenWeather
+
+##### dbconfig.json:  Archivo Json que cuenta con la cadena de conexión para la base de datos POSTGRES.
+
+##### models.py y db.py: Capa de persistencia contra la base de datos que permite operar sobre la tabla weather.
+
+##### feeder.py: Utilizado para invocar a la api e insertar los registros en la base de datos POSTGRES. Articula la recuperación e inserción de datos. 
 
 
 
