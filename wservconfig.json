@@ -1,0 +1,11 @@
+{
+ "templates":"template",
+ "static_folder":"static",
+ "webserver_port":8000,
+ "images":{
+                "ajuste":"ajuste_normal.png",
+                "descomposicion":"descomposicion.png",
+                "serie_temperaturas":"serie_temperaturas.png"
+
+             }
+} 

@@ -4,7 +4,7 @@ import logging
 import os.path
 
 
-services={"weather_api":"apiconfig.json","weather_db":"dbconfig.json"}
+services={"weather_api":"apiconfig.json","weather_db":"dbconfig.json","ws_config":"wservconfig.json"}
 
 class Service(type):
                __cls__={}
@@ -33,6 +33,9 @@ def get_api_property_hook():
 
 def get_db_property_hook():
          return PropertyHook.get_instance("weather_db")
+
+def get_dir_property_hook():
+         return PropertyHook.get_instance("ws_config")   
 
 def get_itba_logger(logname,screen=False):    
           
