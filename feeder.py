@@ -4,7 +4,7 @@ from models import Weather
 import json
 from itbatools import get_itba_logger
 
-logger=get_itba_logger("feeder2",screen=True)
+logger=get_itba_logger("feeder",screen=True)
 
 def load_table():
   try:    
