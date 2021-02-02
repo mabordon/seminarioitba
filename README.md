@@ -11,7 +11,50 @@ Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 #### Extracción/Carga: 
                 
 Consiste en  recuperar información asociada a la temperatura de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
-https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos).
+https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). El json devuelto por el servicio presenta la siguiente forma:
+
+```javascript
+{
+    "coord": {
+        "lon": -58.6391,
+        "lat": -34.5883
+    },
+    "weather": [{
+        "id": 802,
+        "main": "Clouds",
+        "description": "scattered clouds",
+        "icon": "03n"
+    }],
+    "base": "stations",
+    "main": {
+        "temp": 19.88,
+        "feels_like": 20.42,
+        "temp_min": 19.44,
+        "temp_max": 20.56,
+        "pressure": 1012,
+        "humidity": 83
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.57,
+        "deg": 160
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1612238761,
+    "sys": {
+        "type": 1,
+        "id": 8232,
+        "country": "AR",
+        "sunrise": 1612257371,
+        "sunset": 1612306821
+    },
+    "timezone": -10800,
+    "id": 3433522,
+    "name": "Hurlingham",
+    "cod": 200
+```
 
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
 **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
