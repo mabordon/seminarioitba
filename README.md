@@ -10,7 +10,7 @@ Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
 #### Extracción/Carga: 
                 
-Consiste en  recuperar información asociada a la temperatura de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
+Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). El json devuelto por el servicio presenta la siguiente forma:
 
 ```javascript
