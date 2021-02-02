@@ -6,7 +6,7 @@
 ### Funcionalidad:
 
 
-Se descompone en **5 grandes bloques**, los cuales se mencionan a continuación:
+Se descompone en **cinco bloques**, los cuales se mencionan a continuación:
 
 #### Extracción: 
                 
