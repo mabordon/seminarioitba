@@ -5,6 +5,7 @@
 
 ### Funcionalidad:
 
+
 Se descompone en 5 grandes bloques, los cuales se mencionan a continuación:
 
 #### Extracción: 
@@ -29,4 +30,7 @@ puerto es susceptible de configuración.
 #### Planificador o Scheduler:
 
 Todos los items anteriores se encuentran gobernados por un **planificador** o **scheduler** sobre el cual se configuran los intervalos de ejecución de las etapas consideradas. Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción puede ser realizada manualmente por el usuario. 
+
+### Descripción de los componentes:
+
 
