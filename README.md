@@ -10,8 +10,7 @@ Se descompone en 5 grandes bloques, los cuales se mencionan a continuación:
 
 #### Extracción: 
                 
-Consiste en  recuperar información asociada a la temperatura, utilizando para ello la **api OpenWeather**,
-Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos).
+Consiste en  recuperar información asociada a la temperatura de la ciudad de **Hurlingham**, utilizando para ello la **api OpenWeather**. Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos).
 
 #### Carga:
 
