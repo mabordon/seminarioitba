@@ -14,7 +14,7 @@ Consiste en  recuperar información asociada a la temperatura de la ciudad de **
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos).
 
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
-**Los archivos empleados son los siguientes:**
+**Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
 | Archivo                   | Descripción                                                                  |          
 | --------------------------|----------------------------------------------------------------------------- |
@@ -24,23 +24,23 @@ Por cada registro recuperado durante la extracción se lleva a cabo la inserció
 | models.py y db.py         | Capa de persistencia contra la base de datos.                                |
 | **feeder.py**             | Utilizado para invocar a la api e insertar los registros en la base de datos.|         
 | itbatools.py              | Libreria auxiliar.                                                           | 
-| logs/feeder.log           | Log utilizado en las etapas de extracción y carga                            |
+| logs/feeder.log           | Log utilizado en las etapas de extracción y carga.                           |
 
 #### Análisis:
 
 Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
-correspondientes gráficos. **Los archivos empleados son los siguientes:**
+correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
 | Archivo                   | Descripción                                                                                       |          
 | --------------------------|---------------------------------------------------------------------------------------------------|
 | **analysis.py**           | Realiza parte de la descomposición ARIMA: tendencia, estacionalidad y ruido. Genera los gráficos  |       
 | itbatools.py              | Libreria auxiliar.                                                                                |
-| logs/analyzer.log         | Log utilizado en la etapa de análisis                                                             |
+| logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                            |
 
 #### Visualización:
 
 Los gráficos generados en la instancia de análisis se disponibilizan por medio de un webserver cuyo 
-puerto es susceptible de configuración. **Los archivos empleados son los siguientes:**
+puerto es susceptible de configuración. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
 | Archivo                  | Descripción                                                                                                 |          
 |--------------------------|------------------------------------------------------------------------------------------------------------ |
@@ -63,7 +63,7 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 | Análisis                  | L a V 00:00 hs |       
 | Web Server (Visualización)| L a V 00:30 hs |      
 
-**Los archivos empleados son los siguientes:**
+**Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
 | Archivo                   | Descripción                                                                                  |          
 | --------------------------|--------------------------------------------------------------------------------------------- |
