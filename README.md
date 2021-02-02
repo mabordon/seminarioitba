@@ -31,11 +31,11 @@ Por cada registro recuperado durante la extracción se lleva a cabo la inserció
 Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
 correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
-| Archivo                   | Descripción                                                                                       |          
-| --------------------------|---------------------------------------------------------------------------------------------------|
-| **analysis.py**           | Realiza parte de la descomposición ARIMA: tendencia, estacionalidad y ruido. Genera los gráficos  |       
-| itbatools.py              | Libreria auxiliar.                                                                                |
-| logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                            |
+| Archivo                   | Descripción                                                                             |          
+| --------------------------|-----------------------------------------------------------------------------------------|
+| **analysis.py**           | Realiza la descomposición ARIMA: tendencia, estacionalidad y ruido. Genera los gráficos.|       
+| itbatools.py              | Libreria auxiliar.                                                                      |
+| logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                  |
 
 #### Visualización:
 
