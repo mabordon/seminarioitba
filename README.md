@@ -38,7 +38,7 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario. 
 
-### Descripción de los componentes:
+### Descripción de los componentes por fase:
 
 
 
