@@ -23,7 +23,7 @@ Por cada registro recuperado durante la extracción se lleva a cabo la inserció
 | dbconfig.json             | Archivo Json que cuenta con la cadena de conexión para la base de datos.     |     
 | models.py y db.py         | Capa de persistencia contra la base de datos.                                |
 | **feeder.py**             | Utilizado para invocar a la api e insertar los registros en la base de datos.|         
-| itbatools.py              | Libreria auxiliar.                                                           | 
+| itbatools.py              | Librería auxiliar.                                                           | 
 | logs/feeder.log           | Log utilizado en las etapas de extracción y carga.                           |
 
 #### Análisis:
@@ -34,7 +34,7 @@ correspondientes gráficos. **Los archivos empleados son los siguientes (se marc
 | Archivo                   | Descripción                                                                             |          
 | --------------------------|-----------------------------------------------------------------------------------------|
 | **analysis.py**           | Realiza la descomposición ARIMA: tendencia, estacionalidad y ruido. Genera los gráficos.|       
-| itbatools.py              | Libreria auxiliar.                                                                      |
+| itbatools.py              | Librería auxiliar.                                                                      |
 | logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                  |
 
 #### Visualización:
@@ -44,11 +44,11 @@ puerto es susceptible de configuración. **Los archivos empleados son los siguie
 
 | Archivo                  | Descripción                                                                                                 |          
 |--------------------------|------------------------------------------------------------------------------------------------------------ |
-| **webserver.py**         | Es el webserver encargado de disponibilizar las imagenes generadas en la etapa de análisis.                 |       
+| **webserver.py**         | Es el webserver encargado de disponibilizar las imágenes generadas en la etapa de análisis.                 |       
 | wservconfig.json         | Se trata del archivo de configuración del webserver.                                                        |       
-| static                   | Es el directorio donde se almacenan los graficos generados en la fase de análisis.                          |     
+| static                   | Es el directorio donde se almacenan los gráficos generados en la fase de análisis.                          |     
 | template                 | Es el directorio donde se encuentra el index.html que es la página sobre la cual se insertarán los gráficos.|
-| itbatools.py             | Libreria auxiliar.                                                                                          |
+| itbatools.py             | Librería auxiliar.                                                                                          |
 
 
 
