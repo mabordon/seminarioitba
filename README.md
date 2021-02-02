@@ -72,7 +72,12 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
+### Plataforma de ejecución:
 
+Python 3.6 sobre Windows 10 Home utilizando Anaconda Navigator 1.10.
+
+
+### Requerimientos:
 
 
 
