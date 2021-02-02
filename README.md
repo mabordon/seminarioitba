@@ -74,10 +74,11 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 
 ### Plataforma de ejecución:
 
-Python 3.6 sobre Windows 10 Home utilizando Anaconda Navigator 1.10.
+S.0: Windows 10 Home.
+Python: 3.6. 
+Anaconda Navigator: 1.10.
+Base de datos: PostgreSQL.
 
-
-### Requerimientos:
 
 
 
