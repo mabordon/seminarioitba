@@ -19,7 +19,7 @@ Por cada registro recuperado durante la fase de extracción se lleva a cabo la i
 
 #### Análisis:
 
-Tomando como referencia **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
+Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
 correspondientes gráficos. 
 
 #### Visualización:
