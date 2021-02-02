@@ -79,7 +79,7 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 * Anaconda Navigator: 1.10.
 * Base de datos: PostgreSQL.
 
-
+### Librerías python:
 
 
 
