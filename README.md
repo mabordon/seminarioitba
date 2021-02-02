@@ -70,7 +70,7 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 | **starter.py**            | Planifica las etapas del pipeline. Punto de entrada principal de ejecución para el operador. |  
 
 
-Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**
+Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
 
 
