@@ -301,7 +301,7 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 
 ### Plataforma de ejecución:
 
-* S.0: Windows 10 Home.
+* S.O: Windows 10 Home.
 * Python: 3.6. 
 * Anaconda Navigator: 1.10.
 * Base de datos: PostgreSQL.
