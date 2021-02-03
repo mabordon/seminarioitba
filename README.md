@@ -250,8 +250,8 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 | Fase                      | Planificación  |          
 | --------------------------|:--------------:|
 | Extracción y Carga        | Cada 30 minutos|       
-| Análisis                  | L a V 00:00 hs |       
-| Web Server (Visualización)| L a V 00:30 hs |      
+| Análisis                  | l a v 00:00 hs |       
+| Web Server (Visualización)| l a v 00:30 hs |      
 
 **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
