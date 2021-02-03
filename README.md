@@ -217,7 +217,7 @@ puerto es susceptible de configuración. **Los archivos empleados son los siguie
 **Para el webserver se utiliza Flask e itbatools.py para obtener información de los directorios para recuperar los recursos (página index.html e imágenes)**
 
 ```python
-from flask import Flask,render_template, jsonify
+from flask import Flask,render_template
 from itbatools import get_dir_property_hook
 
 webserver_info=get_dir_property_hook()
