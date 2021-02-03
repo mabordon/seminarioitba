@@ -9,9 +9,15 @@
 | Maximiliano Bordón        |29.053.775    |       
 | Juan Manuel Domínguez     |25.021.357    |       
 
+**Tabla de Contenidos**   
+1. [Funcionalidad](#id1)
+2. [Plataforma de ejecución](#id2)
+3. [Librerías python](#id3)
+4. [Bootstrap y JQuery](#id4)
+5. [Instalación](#id5)
+5. [Capturas de pantalla](#id6)
 
-
-### Funcionalidad:
+### Funcionalidad:<a name="id1"></a>
 
 
 Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
@@ -315,16 +321,16 @@ if __name__ == '__main__':
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server (**start_server**) para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
-### Plataforma de ejecución:
+### Plataforma de ejecución:<a name="id2"></a>
 
 * S.O: Windows 10 Home.
 * Python: 3.6. 
 * Anaconda Navigator: 1.10.
 * Base de datos: PostgreSQL.
 
-### Librerías python:
+### Librerías python:<a name="id3"></a>
 
-### Bootstrap  y JQuery:
+### Bootstrap  y JQuery:<a name="id4"></a>
 
 [Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
 ```html
@@ -337,7 +343,7 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 ```
 
 
-### Instalación:
+### Instalación:<a name="id5"></a>
 
-### Capturas de pantalla:
+### Capturas de pantalla:<a name="id6"></a>
 
