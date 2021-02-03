@@ -2,6 +2,14 @@
 
 ## Trabajo Práctico de la materia Seminario de Tópicos Avanzados de la Especialización en Ciencia de Datos.
 
+### Integrantes:
+
+| Nombre y Apellido         | DNI          |          
+| --------------------------|:------------:|
+| Maximiliano Bordón        |29.053.775    |       
+| Juan Manuel Domínguez     |25.021.357    |       
+
+
 
 ### Funcionalidad:
 
