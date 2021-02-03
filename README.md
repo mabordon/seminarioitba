@@ -98,17 +98,6 @@ El json devuelto por el servicio presenta la siguiente forma:
 Se adjunta link para consultar el significado de los [campos devueltos en la llamada](https://openweathermap.org/current#parameter).
 
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
-**Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
-
-| Archivo                   | Descripción                                                                  |          
-| --------------------------|----------------------------------------------------------------------------- |
-| weatherapi.py             | Clase utilizada para recuperar la información de la api.                     |       
-| apiconfig.json            | Archivo Json de configuración de la api OpenWeather.                         |       
-| dbconfig.json             | Archivo Json que cuenta con la cadena de conexión para la base de datos.     |     
-| models.py y db.py         | Capa de persistencia contra la base de datos.                                |
-| **feeder.py**             | Utilizado para invocar a la api e insertar los registros en la base de datos.|         
-| itbatools.py              | Librería auxiliar.                                                           | 
-| logs/feeder.log           | Log utilizado en las etapas de extracción y carga.                           |
 
 En **models.py** podemos observar la entidad Weather que se mapea con la tabla homónima de la base de datos:
 
@@ -230,6 +219,19 @@ if __name__=='__main__':
          load_table()
 ```
 La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log llamado feeder.log en el directorio logs. El flag screen determina si la información que se guarda en el log deberá mostrarse adicionalmente por pantalla cuando se encuentra configurado a True. En caso de estar configurado a False se omite salida por pantalla.
+
+**Los archivos empleados durante la fase de extracción y carga son los siguientes (se marca en negrita el ejecutable):**
+
+| Archivo                   | Descripción                                                                  |          
+| --------------------------|----------------------------------------------------------------------------- |
+| weatherapi.py             | Clase utilizada para recuperar la información de la api.                     |       
+| apiconfig.json            | Archivo Json de configuración de la api OpenWeather.                         |       
+| dbconfig.json             | Archivo Json que cuenta con la cadena de conexión para la base de datos.     |     
+| models.py y db.py         | Capa de persistencia contra la base de datos.                                |
+| **feeder.py**             | Utilizado para invocar a la api e insertar los registros en la base de datos.|         
+| itbatools.py              | Librería auxiliar.                                                           | 
+| logs/feeder.log           | Log utilizado en las etapas de extracción y carga.                           |
+
 
 #### Análisis:<a name="id1.2"></a>
 
