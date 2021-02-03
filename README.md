@@ -16,7 +16,7 @@
    3. [Visualización](#id1.3)
    4. [Planificador o Scheduler](#id1.4)
 2. [ITBA TOOLS](#id2)
-3. [Plataforma de ejecución](#id3)
+3. [Plataforma de ejecución utilizada](#id3)
 4. [Dependencias python](#id4)
 5. [Bootstrap y JQuery](#id5)
 6. [Instalación](#id6)
@@ -417,7 +417,7 @@ def get_itba_logger(logname, screen=False):
     return logging.getLogger(logname)
 ```
 
-### Plataforma de ejecución:<a name="id3"></a>
+### Plataforma de ejecución utilizada:<a name="id3"></a>
 
 * S.O: Windows 10 Home.
 * Python: 3.6. 
