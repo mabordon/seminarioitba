@@ -1,4 +1,4 @@
-# Seminario Itba de la Especialización en Ciencia de Datos
+# Especialización en Ciencia de Datos ITBA
 
 ## Trabajo Práctico de la materia Seminario de Tópicos Avanzados.
 
