@@ -11,8 +11,10 @@
 
 **Tabla de Contenidos**   
 1. [Funcionalidad](#id1)
-    1.1 [Extracción/Carga](#id1.1)
-	  1.2 [Análisis](#id1.2)
+   1. [Extracción/Carga](#id1.1)
+   2. [Análisis](#id1.2)
+   3. [Visualización](#id1.3)
+   4. [Planificador o Scheduler](#id1.4)
 2. [Plataforma de ejecución](#id2)
 3. [Librerías python](#id3)
 4. [Bootstrap y JQuery](#id4)
@@ -239,7 +241,7 @@ correspondientes gráficos. **Los archivos empleados son los siguientes (se marc
 | itbatools.py              | Librería auxiliar.                                                                      |
 | logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                  |
 
-#### Visualización:
+#### Visualización:<a name="id1.3"></a> 
 
 Los gráficos generados en la instancia de análisis se disponibilizan por medio de un webserver cuyo 
 puerto es susceptible de configuración. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
@@ -289,7 +291,7 @@ if __name__ == "__main__":
 
 ```
 
-#### Planificador o Scheduler:
+#### Planificador o Scheduler:<a name="id1.4"></a> 
 
 Todos los items anteriores se encuentran gobernados por un **planificador** o **scheduler** sobre el cual se configuran los intervalos de ejecución de las etapas consideradas. 
 
