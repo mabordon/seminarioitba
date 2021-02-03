@@ -117,6 +117,35 @@ class Weather(db.Base):
        
 db.Base.metadata.create_all(db.engine) 
 ```
+La instrucción **db.Base.metadata.create_all(db.engine)** permite crear la tabla weather de forma automática sólo en el caso que no exista. 
+
+Despues de la primera ejecución, si verificamos del lado de la BD observaremos que la tabla **weather** posee la siguiente forma:
+```sql
+CREATE TABLE public.weather
+(
+    id integer NOT NULL DEFAULT nextval('weather_id_seq'::regclass),
+    weather character varying(60) COLLATE pg_catalog."default",
+    temperature double precision,
+    tempmin double precision,
+    tempmax double precision,
+    feelslike double precision,
+    pressure double precision,
+    humidity double precision,
+    visibility double precision,
+    windspeed double precision,
+    winddeg double precision,
+    cloudiness double precision,
+    dt timestamp without time zone,
+    CONSTRAINT weather_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.weather
+    OWNER to postgres;
+```
 
 #### Análisis:
 
