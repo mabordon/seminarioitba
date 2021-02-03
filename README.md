@@ -11,8 +11,8 @@
 
 **Tabla de Contenidos**   
 1. [Funcionalidad](#id1)
-    1.1 [Extracción/Carga] (#id1.1)
-	  1.2 [Análisis] (#id1.2)
+    1.1 [Extracción/Carga](#id1.1)
+	  1.2 [Análisis](#id1.2)
 2. [Plataforma de ejecución](#id2)
 3. [Librerías python](#id3)
 4. [Bootstrap y JQuery](#id4)
