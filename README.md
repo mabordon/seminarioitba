@@ -146,6 +146,49 @@ TABLESPACE pg_default;
 ALTER TABLE public.weather
     OWNER to postgres;
 ```
+Como se mencionó con antelación, la llamada a la api y la inserción de registros en la base de datos se realiza por medio del archivo **feeder.py**
+
+```python
+import db
+from weatherapi import WeatherApi
+from models import Weather
+import json
+from itbatools import get_itba_logger
+
+logger=get_itba_logger("feeder",screen=True)
+
+def load_table():
+  try:    
+    feeder=WeatherApi()
+    response=feeder.get_weather_info() 
+    data=json.loads(response.text)
+    print(response.text)
+    weather=data["weather"][0]["main"]
+    temperature = data["main"]["temp"]
+    tempmin=data["main"]["temp_min"]
+    tempmax=data["main"]["temp_max"]
+    feelslike=data["main"]["feels_like"]
+    pressure=data["main"]["pressure"]
+    humidity=data["main"]["humidity"]
+    visibility=data["visibility"]
+    windspeed=data["wind"]["speed"]
+    winddeg=data["wind"]["deg"]  
+    cloudiness=data["clouds"]["all"]
+    dt=data["dt"]
+    w=Weather(weather,temperature,tempmin,tempmax,feelslike, 
+                    pressure, humidity,visibility,windspeed,winddeg,
+                    cloudiness,dt)
+    w.save() 
+    logger.info(f"Ejecutando la inserción de {response.text}")
+
+  
+  except Exception as e:
+                      logger.error(e)
+
+if __name__=='__main__':
+         load_table()
+```
+La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log llamado feeder.log en el directorio logs. El flag screen determina si la información que se guarda en el log deberá mostrarse adicionalmente por pantalla cuando se encuentra configurado a True. En caso de estar configurado a False se omite salida por pantalla.
 
 #### Análisis:
 
