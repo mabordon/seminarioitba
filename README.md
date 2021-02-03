@@ -15,11 +15,12 @@
    2. [Análisis](#id1.2)
    3. [Visualización](#id1.3)
    4. [Planificador o Scheduler](#id1.4)
-2. [Plataforma de ejecución](#id2)
-3. [Librerías python](#id3)
-4. [Bootstrap y JQuery](#id4)
-5. [Instalación](#id5)
-5. [Capturas de pantalla](#id6)
+2. [ITBA TOOLS](#id2)
+3. [Plataforma de ejecución](#id3)
+4. [Dependencias python](#id4)
+5. [Bootstrap y JQuery](#id5)
+6. [Instalación](#id6)
+7. [Capturas de pantalla](#id7)
 
 ### Funcionalidad:<a name="id1"></a>
 
@@ -325,16 +326,18 @@ if __name__ == '__main__':
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server (**start_server**) para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
-### Plataforma de ejecución:<a name="id2"></a>
+### ITBA TOOLS:<a name="id2"></a>
+
+### Plataforma de ejecución:<a name="id3"></a>
 
 * S.O: Windows 10 Home.
 * Python: 3.6. 
 * Anaconda Navigator: 1.10.
 * Base de datos: PostgreSQL.
 
-### Librerías python:<a name="id3"></a>
+### Dependencias python:<a name="id4"></a>
 
-### Bootstrap  y JQuery:<a name="id4"></a>
+### Bootstrap  y JQuery:<a name="id5"></a>
 
 [Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
 ```html
@@ -347,7 +350,7 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 ```
 
 
-### Instalación:<a name="id5"></a>
+### Instalación:<a name="id6"></a>
 
-### Capturas de pantalla:<a name="id6"></a>
+### Capturas de pantalla:<a name="id7"></a>
 
