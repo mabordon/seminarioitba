@@ -428,7 +428,7 @@ def get_itba_logger(logname, screen=False):
 
 ### Bootstrap  y JQuery:<a name="id5"></a>
 
-[Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
+[Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) y [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
 ```html
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
