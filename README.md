@@ -11,7 +11,28 @@ Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 #### Extracción/Carga: 
                 
 Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
-https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). El json devuelto por el servicio presenta la siguiente forma:
+https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). La invocación de la api se encuentra a cargo de ***weatherapi.py*** que por medio de **itbatools.py** recupera la configuración para hacer la llamada, según se ilustra a continuación:
+
+```python
+import requests
+import json
+from itbatools import get_api_property_hook
+                
+
+class WeatherApi:
+          def __init__(self):
+                    self._propertyhook=get_api_property_hook()                     
+          def get_weather_info(self): 
+                response = requests.request("GET", self._propertyhook.url, 
+                                                   headers=self._propertyhook.headers, 
+                                                   params=self._propertyhook.querystring)
+                
+                return response
+```
+
+
+
+El json devuelto por el servicio presenta la siguiente forma:
 
 ```javascript
 {
