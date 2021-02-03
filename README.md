@@ -10,7 +10,7 @@ Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
 #### Extracción/Carga: 
                 
-Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [**api OpenWeather**](
+Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [api OpenWeather](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). La invocación de la api se encuentra a cargo de ***weatherapi.py*** que por medio de **itbatools.py** recupera la configuración para hacer la llamada, según se ilustra a continuación:
 
 ```python
@@ -76,6 +76,7 @@ El json devuelto por el servicio presenta la siguiente forma:
     "name": "Hurlingham",
     "cod": 200
 ```
+Se adjunta link para consultar el significado de los [campos devueltos en la llamada](https://openweathermap.org/current#parameter).
 
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
 **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
