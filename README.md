@@ -324,9 +324,9 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 
 ### Librerías python:
 
-### Bootstrap y JQuery:
+### Bootstrap  y JQuery:
 
-Son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
+[Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
 ```html
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -335,6 +335,8 @@ Son utilizados por la página **templates/index.html** que sirve los gráficos g
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 ```
+
+
 ### Instalación:
 
 ### Capturas de pantalla:
