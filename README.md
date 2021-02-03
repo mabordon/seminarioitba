@@ -329,6 +329,16 @@ Con respecto a la visualización, una de las tareas planificadas, a ejecutarse d
 ### ITBA TOOLS:<a name="id2"></a>
 
 Para este proyecto se diseño la librería llamada **itbatools.py** la cual es utilizada en todas las etapas del proceso.
+Provee los siguientes recursos: 
+
+* Loggers. Los archivos se guardan en el directorio */logs*
+* Configuración de la *api open weather* 
+* Configuración de *base de datos*
+* Configuración del web server para mostrar los gráficos
+
+**Para cada servicio se devuelve una única instancia de configuración empleando el patrón Singleton**
+
+El código fuente es el siguiente: 
 
 ```python
 import json
