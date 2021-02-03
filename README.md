@@ -11,6 +11,8 @@
 
 **Tabla de Contenidos**   
 1. [Funcionalidad](#id1)
+    1.1 [Extracción/Carga] (#id1.1)
+	  1.2 [Análisis] (#id1.2)
 2. [Plataforma de ejecución](#id2)
 3. [Librerías python](#id3)
 4. [Bootstrap y JQuery](#id4)
@@ -22,7 +24,7 @@
 
 Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
-#### Extracción/Carga: 
+#### Extracción/Carga:<a name="id1.1"></a> 
                 
 Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [api OpenWeather](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). La invocación de la api se encuentra a cargo de ***weatherapi.py*** que por medio de **itbatools.py** recupera la configuración para hacer la llamada, según se ilustra a continuación:
@@ -226,7 +228,7 @@ if __name__=='__main__':
 ```
 La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log llamado feeder.log en el directorio logs. El flag screen determina si la información que se guarda en el log deberá mostrarse adicionalmente por pantalla cuando se encuentra configurado a True. En caso de estar configurado a False se omite salida por pantalla.
 
-#### Análisis:
+#### Análisis:<a name="id1.2"></a>
 
 Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
 correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
