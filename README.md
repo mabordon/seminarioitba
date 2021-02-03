@@ -112,6 +112,21 @@ Todos los items anteriores se encuentran gobernados por un **planificador** o **
 | --------------------------|--------------------------------------------------------------------------------------------- |
 | **starter.py**            | Planifica las etapas del pipeline. Punto de entrada principal de ejecución para el operador. |  
 
+**El código es el siguiente:**
+
+```python
+from feeder import load_table
+from apscheduler.schedulers.background import BlockingScheduler
+from analysis import do_analysis
+from webserver import start_server
+
+if __name__ == '__main__':      
+          sched = BlockingScheduler()          
+          sched.add_job(load_table, 'interval', seconds =1800)
+          sched.add_job(do_analysis,'cron',day_of_week='mon-fri',hour=00,minute=00)
+          sched.add_job(start_server,'cron',day_of_week='mon-fri',hour=00,minute=30)
+          sched.start()
+```
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
