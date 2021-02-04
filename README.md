@@ -194,8 +194,7 @@ def load_table():
   try:    
     feeder=WeatherApi()
     response=feeder.get_weather_info() 
-    data=json.loads(response.text)
-    print(response.text)
+    data=json.loads(response.text)    
     weather=data["weather"][0]["main"]
     temperature = data["main"]["temp"]
     tempmin=data["main"]["temp_min"]
