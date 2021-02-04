@@ -10,27 +10,34 @@
 | Juan Manuel Domínguez     |25.021.357    |       
 
 **Tabla de Contenidos**   
-1. [Funcionalidad](#id1)
-   1. [Extracción/Carga](#id1.1)
-   2. [Análisis](#id1.2)
-   3. [Visualización](#id1.3)
-   4. [Planificador o Scheduler](#id1.4)
-2. [ITBA TOOLS](#id2)
-3. [Plataforma de ejecución utilizada](#id3)
-4. [Dependencias python](#id4)
-5. [Bootstrap y JQuery](#id5)
-6. [Instalación](#id6)
-7. [Capturas de pantalla](#id7)
+1. [Breve descripción del proyecto](#id1)
+2. [Diagrama](#id2)
+3. [Funcionalidad](#id3)
+   1. [Extracción/Carga](#id3.1)
+   2. [Análisis](#id3.2)
+   3. [Visualización](#id3.3)
+   4. [Planificador o Scheduler](#id3.4)
+4. [ITBA TOOLS](#id4)
+5. [Plataforma de ejecución utilizada](#id5)
+6. [Dependencias python](#id6)
+7. [Bootstrap y JQuery](#id7)
+8. [Instalación](#id8)
+9. [Capturas de pantalla](#id9)
 
-### Funcionalidad:<a name="id1"></a>
+### Breve descripción del proyecto:<a name="id1"></a>
 
+El proyecto consiste en tomar la información ,por medio de una api, de las condiciones meteorológicas asociadas a un punto arbitrario de buenos aires, en este caso Hurlingham **(ciudad donde vive uno de los integrantes del equipo)**  y almacenarla en una base de datos, para luego generar una serie de tiempo tomando la temperatura y el horario de  medición, decomponiéndola en tendencia, estacionalidad y residuos. Aclaramos que no se trata de un análisis **ARIMA** completo. Finalmente se disponibiliza un webserver que permite ver al operador los gráficos generados durante la etapa mencionada con anterioridad. Las fases consideradas del proceso se encuentran regidas por un **cron o scheduler**.
+
+### Diagrama:<a name="id2"></a>
 
 ![Arquitectura](/capturas/arquitectura.jpeg "Arquitectura")
+
+### Funcionalidad:<a name="id3"></a>
 
 
 Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
-#### Extracción/Carga:<a name="id1.1"></a> 
+#### Extracción/Carga:<a name="id3.1"></a> 
                 
 Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [api OpenWeather](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). La invocación de la api se encuentra a cargo de ***weatherapi.py*** que por medio de **itbatools.py** recupera la configuración para hacer la llamada, según se ilustra a continuación:
@@ -235,7 +242,7 @@ La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log l
 | logs/feeder.log           | Log utilizado en las etapas de extracción y carga.                           |
 
 
-#### Análisis:<a name="id1.2"></a>
+#### Análisis:<a name="id3.2"></a>
 
 Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
 correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
@@ -246,7 +253,7 @@ correspondientes gráficos. **Los archivos empleados son los siguientes (se marc
 | itbatools.py              | Librería auxiliar.                                                                      |
 | logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                  |
 
-#### Visualización:<a name="id1.3"></a> 
+#### Visualización:<a name="id3.3"></a> 
 
 Los gráficos generados en la instancia de análisis se disponibilizan por medio de un webserver cuyo 
 puerto es susceptible de configuración. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
@@ -296,7 +303,7 @@ if __name__ == "__main__":
 
 ```
 
-#### Planificador o Scheduler:<a name="id1.4"></a> 
+#### Planificador o Scheduler:<a name="id3.4"></a> 
 
 Todos los items anteriores se encuentran gobernados por un **planificador** o **scheduler** sobre el cual se configuran los intervalos de ejecución de las etapas consideradas. 
 
@@ -330,7 +337,7 @@ if __name__ == '__main__':
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server (**start_server**) para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
-### ITBA TOOLS:<a name="id2"></a>
+### ITBA TOOLS:<a name="id4"></a>
 
 Para este proyecto se diseño la librería llamada **itbatools.py** la cual es utilizada en todas las etapas del proceso.
 Provee los siguientes recursos: 
@@ -431,16 +438,16 @@ def get_itba_logger(logname, screen=False):
     return logging.getLogger(logname)
 ```
 
-### Plataforma de ejecución utilizada:<a name="id3"></a>
+### Plataforma de ejecución utilizada:<a name="id5"></a>
 
 * S.O: Windows 10 Home.
 * Python: 3.6. 
 * Anaconda Navigator: 1.10.
 * Base de datos: PostgreSQL.
 
-### Dependencias python:<a name="id4"></a>
+### Dependencias python:<a name="id6"></a>
 
-### Bootstrap  y JQuery:<a name="id5"></a>
+### Bootstrap  y JQuery:<a name="id7"></a>
 
 [Bootstrap 3.4.1](https://getbootstrap.com/docs/3.4/) y [JQuery 3.5.1](https://jquery.com/download/) son utilizados por la página **templates/index.html** que sirve los gráficos generados en el proceso.
 ```html
@@ -453,7 +460,7 @@ def get_itba_logger(logname, screen=False):
 ```
 
 
-### Instalación:<a name="id6"></a>
+### Instalación:<a name="id8"></a>
 
-### Capturas de pantalla:<a name="id7"></a>
+### Capturas de pantalla:<a name="id9"></a>
 
