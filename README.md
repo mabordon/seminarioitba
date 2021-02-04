@@ -25,6 +25,9 @@
 ### Funcionalidad:<a name="id1"></a>
 
 
+![Arquitectura](/capturas/arquitectura.jpeg "Arquitectura")
+
+
 Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
 #### Extracción/Carga:<a name="id1.1"></a> 
