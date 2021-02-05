@@ -465,3 +465,8 @@ def get_itba_logger(logname, screen=False):
 
 ### Capturas de pantalla:<a name="id9"></a>
 
+![Web server main screen](/capturas/webserver_panel.JPG "Web server main screen")
+![Serie de tiempo](/capturas/serie_de_tiempo.JPG "Serie de tiempo")
+![Descomposición](/capturas/descomposicion_serie.JPG "Descomposición")
+![Ajuste normal](/capturas/ajuste_normal.JPG "Ajuste normal")
+
