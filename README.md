@@ -13,7 +13,7 @@
 1. [Breve descripción del proyecto](#id1)
 2. [Diagrama](#id2)
 3. [Funcionalidad](#id3)
-   1. [Extracción/Carga](#id3.1)
+   1. [Extracción-Transformación-Carga](#id3.1)
    2. [Análisis](#id3.2)
    3. [Visualización](#id3.3)
    4. [Planificador o Scheduler](#id3.4)
@@ -26,7 +26,7 @@
 
 ### Breve descripción del proyecto:<a name="id1"></a>
 
-El proyecto consiste en tomar la información ,por medio de una api, de las condiciones meteorológicas asociadas a un punto arbitrario de buenos aires, en este caso Hurlingham **(ciudad donde vive uno de los integrantes del equipo)**  y almacenarla en una base de datos, para luego generar una serie de tiempo tomando la temperatura y el horario de  medición, decomponiéndola en **tendencia**, **estacionalidad** y **residuos** (aclaramos que no se trata de un análisis **ARIMA** completo). Finalmente se disponibiliza un webserver que permite ver al operador los gráficos generados durante la etapa mencionada con anterioridad. Las fases consideradas del proceso se encuentran regidas por un **cron o scheduler**.
+El proyecto consiste en tomar la información ,por medio de una api, de las condiciones meteorológicas asociadas a un punto arbitrario de buenos aires, en este caso [Hurlingham](https://es.wikipedia.org/wiki/Hurlingham) **(ciudad donde vive uno de los integrantes del equipo)**  y almacenarla en una base de datos, para luego generar una serie de tiempo tomando la temperatura y el horario de  medición, decomponiéndola en **tendencia**, **estacionalidad** y **residuos** (aclaramos que no se trata de un análisis **ARIMA** completo). Finalmente se disponibiliza un webserver que permite ver al operador los gráficos generados durante la etapa mencionada con anterioridad. Las fases consideradas del proceso se encuentran regidas por un **cron o scheduler**.
 
 ### Diagrama:<a name="id2"></a>
 
@@ -37,7 +37,7 @@ El proyecto consiste en tomar la información ,por medio de una api, de las cond
 
 Se descompone en **cuatro bloques**, los cuales se mencionan a continuación:
 
-#### Extracción/Carga:<a name="id3.1"></a> 
+#### Extracción-Transformación-Carga:<a name="id3.1"></a> 
                 
 Consiste en  recuperar información meteorológica de la ciudad de **Hurlingham**, utilizando para ello la [api OpenWeather](
 https://rapidapi.com/community/api/open-weather-map). Cabe destacar que por medio de este método los datos son sensados a intervalos regulares de tiempo (cada 30 minutos). La invocación de la api se encuentra a cargo de ***weatherapi.py*** que por medio de **itbatools.py** recupera la configuración para hacer la llamada, según se ilustra a continuación:
@@ -108,7 +108,7 @@ El json devuelto por el servicio presenta la siguiente forma:
 Se adjunta link para consultar el significado de los [campos devueltos en la llamada](https://openweathermap.org/current#parameter).
 
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
-La **transformación** aqui consiste en aplanar los niveles de anidamiento de la respuesta JSON al momento de trasladarla al **modelo entidad relación**.
+La **transformación** aqui consiste en aplanar los niveles de anidamiento de la respuesta JSON al momento de trasladarla al **modelo entidad relación** y descartar ciertas entradas del response consideradas irrelevantas para el análisis posterior.
 
 En **models.py** podemos observar la entidad Weather que se mapea con la tabla del mismo nombre en la base de datos:
 
