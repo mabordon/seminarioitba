@@ -110,7 +110,7 @@ Se adjunta link para consultar el significado de los [campos devueltos en la lla
 Por cada registro recuperado durante la extracción se lleva a cabo la inserción de los datos en la tabla **weather** de la base de datos **homónima** para su posterior análisis. 
 La **transformación** aqui consiste en aplanar los niveles de anidamiento de la respuesta JSON al momento de trasladarla al **modelo entidad relación** y descartar ciertas entradas del response consideradas irrelevantas para el análisis posterior.
 
-En **models.py** podemos observar la entidad Weather que se mapea con la tabla del mismo nombre en la base de datos:
+En **models.py** podemos observar como la entidad Weather se mapea con la tabla del mismo nombre en la base de datos:
 
 ```python
 import db
