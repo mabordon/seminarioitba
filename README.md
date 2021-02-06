@@ -245,14 +245,13 @@ La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log l
 
 #### Análisis:<a name="id3.2"></a>
 
-Tomando como referencia a **ARIMA**, se realiza una descomposición de la serie de tiempo en: **tendencia**, **estacionalidad** y **residuos** , con sus 
-correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
+Tomando como referencia la temperatura y el horario de medición se genera una serie de tiempo, la cual se descompone en las siguientes tres dimensiones: **tendencia**, **estacionalidad** y **residuos** , con sus correspondientes gráficos. **Los archivos empleados son los siguientes (se marca en negrita el ejecutable):**
 
-| Archivo                   | Descripción                                                                             |          
-| --------------------------|-----------------------------------------------------------------------------------------|
-| **analysis.py**           | Realiza la descomposición ARIMA: tendencia, estacionalidad y ruido. Genera los gráficos.|       
-| itbatools.py              | Librería auxiliar.                                                                      |
-| logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                  |
+| Archivo                   | Descripción                                                                                                |          
+| --------------------------|------------------------------------------------------------------------------------------------------------|
+| **analysis.py**           | Realiza la descomposición de la serie de tiempo en: tendencia, estacionalidad y ruido. Genera los gráficos.|       
+| itbatools.py              | Librería auxiliar.                                                                                         |
+| logs/analyzer.log         | Log utilizado en la etapa de análisis.                                                                     |
 
 #### Visualización:<a name="id3.3"></a> 
 
