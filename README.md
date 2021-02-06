@@ -448,7 +448,7 @@ def get_itba_logger(logname, screen=False):
 
 ### Dependencias python:<a name="id6"></a>
 
-Ver [requerimientos](requeriments.txt)
+Ver [requerimientos](requirements.txt)
 
 ### Bootstrap  y JQuery:<a name="id7"></a>
 
