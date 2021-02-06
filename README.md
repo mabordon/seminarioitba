@@ -230,7 +230,7 @@ if __name__=='__main__':
 ```
 La instrucción **logger=get_itba_logger("feeder",screen=True)** genera el log llamado feeder.log en el directorio logs. El flag screen determina si la información que se guarda en el log deberá mostrarse adicionalmente por pantalla cuando se encuentra configurado a True. En caso de estar configurado a False se omite salida por pantalla.
 
-**Los archivos empleados durante la fase de extracción y carga son los siguientes (se marca en negrita el ejecutable):**
+**Los archivos empleados durante la fase de extracción, transformación y carga son los siguientes (se marca en negrita el ejecutable):**
 
 | Archivo                   | Descripción                                                                  |          
 | --------------------------|----------------------------------------------------------------------------- |
