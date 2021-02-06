@@ -491,17 +491,17 @@ conda activate seminario_itba
 
 * Puesta en marcha:
 
-  Ir a la carpeta donde se descargo el repositorio y en la consola de anaconda ejecutar
+  Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar
 
 ```cmd
 python starter.py
 ```
 
-* Para probar cada componente por separado:
+#### Para probar cada componente por separado:
 
 **ETL:**
 
-Ir a la carpeta donde se descargo el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
+   Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
 
 ```cmd
 python feeder.py
@@ -509,7 +509,7 @@ python feeder.py
 
 **Análisis:**
 
-Ir a la carpeta donde se descargo el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
+  Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
 
 ```cmd
 python analysis.py
@@ -517,7 +517,7 @@ python analysis.py
 
 **Visualización:**
 
-Ir a la carpeta donde se descargo el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
+  Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar (con el entorno **seminario_itba** activo):
 
 ```cmd
 python webserver.py
