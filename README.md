@@ -465,6 +465,39 @@ Ver [requerimientos](requirements.txt)
 
 ### Instalación:<a name="id8"></a>
 
+* Instalar Postgres https://www.postgresql.org/download/
+* Instalar Git Bash https://git-scm.com/downloads
+* Instalar Anaconda https://www.anaconda.com/distribution/
+* Crear en postgres la base de datos llamada weather. 
+* Para comenzar con datos, pegue el script que figura en el directorio **scripts db/weather.sql** y ejecutelo sobre la query tool de pgadmin, posicionándose en la db anteriormente creada. Este script crea la tabla weather y la puebla.
+* Clonar el proyecto desde gitbash console:
+```shell
+   git clone https://github.com/mabordon/seminarioitba.git
+```
+
+* Ejecutar Anaconda prompt
+
+* Crear el entorno en el directorio del repositorio, con la siguiente instrucción:
+
+```cmd
+conda create --name seminario_itba --file requirements.txt
+```
+
+* Activar el entorno creado con:
+
+```cmd
+conda activate seminario_itba
+```
+
+* Puesta en marcha:
+
+  Ir a la carpeta donde se descargo el repositorio y en la consola de anaconda ejecutar
+
+```cmd
+python starter.py
+```
+
+
 ### Capturas de pantalla:<a name="id9"></a>
 
 ![Web server main screen](/capturas/webserver_panel.JPG "Web server main screen")
