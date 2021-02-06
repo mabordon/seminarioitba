@@ -443,8 +443,8 @@ def get_itba_logger(logname, screen=False):
 
 * S.O: Windows 10 Home.
 * Python: 3.6. 
-* Anaconda Navigator: 1.10.
-* Base de datos: PostgreSQL.
+* Anaconda: 3.7.
+* Base de datos: PostgreSQL 10.
 
 ### Dependencias python:<a name="id6"></a>
 
