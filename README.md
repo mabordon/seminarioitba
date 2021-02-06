@@ -26,7 +26,7 @@
 
 ### Breve descripción del proyecto:<a name="id1"></a>
 
-El proyecto consiste en tomar la información ,por medio de una api, de las condiciones meteorológicas asociadas a un punto arbitrario de buenos aires, en este caso [Hurlingham](https://es.wikipedia.org/wiki/Hurlingham) **(ciudad donde vive uno de los integrantes del equipo)**  y almacenarla en una base de datos, para luego generar una serie de tiempo tomando la temperatura y el horario de  medición, decomponiéndola en **tendencia**, **estacionalidad** y **residuos** (aclaramos que no se trata de un análisis **ARIMA** completo). Finalmente se disponibiliza un webserver que permite ver al operador los gráficos generados durante la etapa mencionada con anterioridad. Las fases consideradas del proceso se encuentran regidas por un **cron o scheduler**.
+El proyecto consiste en tomar la información ,por medio de una api, de las condiciones meteorológicas asociadas a un punto arbitrario de buenos aires, en este caso [Hurlingham](https://es.wikipedia.org/wiki/Hurlingham) **(ciudad donde vive uno de los integrantes del equipo)**  y almacenarla en una base de datos, para luego generar una serie de tiempo tomando la temperatura y el horario de  medición, decomponiéndola en **tendencia**, **estacionalidad** y **residuos**. Finalmente se disponibiliza un webserver que permite ver al operador los gráficos generados durante la etapa mencionada con anterioridad. Las fases consideradas del proceso se encuentran regidas por un **cron o scheduler**.
 
 ### Diagrama:<a name="id2"></a>
 
