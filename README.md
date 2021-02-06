@@ -17,11 +17,11 @@
    2. [Análisis](#id3.2)
    3. [Visualización](#id3.3)
    4. [Planificador o Scheduler](#id3.4)
-4. [ITBA TOOLS](#id4)
+4. [Itba Tools](#id4)
 5. [Plataforma de ejecución utilizada](#id5)
 6. [Dependencias python](#id6)
 7. [Bootstrap y JQuery](#id7)
-8. [Instalación](#id8)
+8. [Instalación y puesta en marcha](#id8)
 9. [Capturas de pantalla](#id9)
 
 ### Breve descripción del proyecto:<a name="id1"></a>
@@ -338,7 +338,7 @@ if __name__ == '__main__':
 
 Con respecto a la visualización, una de las tareas planificadas, a ejecutarse de forma autónoma, consiste en disponibilizar el web server (**start_server**) para que el operador pueda acceder a los gráficos. Sin embargo esta acción que implica levantar el servicio puede ser realizada manualmente por el usuario, a través de la ejecución del archivo **webserver.py**.
 
-### ITBA TOOLS:<a name="id4"></a>
+### Itba Tools:<a name="id4"></a>
 
 Para este proyecto se diseño la librería llamada **itbatools.py** la cual es utilizada en todas las etapas del proceso.
 Provee los siguientes recursos: 
@@ -463,7 +463,7 @@ Ver [requerimientos](requirements.txt)
 ```
 
 
-### Instalación:<a name="id8"></a>
+### Instalación y puesta en marcha:<a name="id8"></a>
 
 * Instalar Postgres https://www.postgresql.org/download/
 * Instalar Git Bash https://git-scm.com/downloads
