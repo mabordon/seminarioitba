@@ -487,10 +487,13 @@ conda create --name seminario_itba --file requirements.txt
 ```cmd
 conda activate seminario_itba
 ```
-
-* Puesta en marcha:
+* Configurar conexión a base de datos y api:
 
   Adecuar el connection string contra la base de datos editando el archivo **dbconfig.json**.
+  
+  Si bien se provee una **key** para poder acceder a la api, se recomienda efectuar el reemplazo por una adquirida por el usuario. Para ello habrá que editar el archivo  **apiconfig.json** y proveer el valor de **x-rapidapi-key** correspondiente.
+
+* Puesta en marcha:
   
   Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar
 
