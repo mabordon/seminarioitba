@@ -489,7 +489,7 @@ conda activate seminario_itba
 ```
 * Configurar conexión a base de datos y api:
 
-  Adecuar el connection string contra la base de datos editando el archivo **dbconfig.json**.
+  Adecuar el connection string contra la base de datos **postgresql** llamada **weather** editando el archivo **dbconfig.json**.
   
   Si bien se provee una **key** para poder acceder a la api, se recomienda efectuar el reemplazo por una adquirida por el usuario. Para ello habrá que editar el archivo  **apiconfig.json** y proveer el valor de **x-rapidapi-key** que se obtiene al momento de realizar la suscripción.
 
