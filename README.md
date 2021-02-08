@@ -490,6 +490,8 @@ conda activate seminario_itba
 
 * Puesta en marcha:
 
+  Adecuar el connection string contra la base de datos editando el archivo **dbconfig.json**.
+  
   Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar
 
 ```cmd
