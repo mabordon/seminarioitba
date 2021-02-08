@@ -495,7 +495,7 @@ conda activate seminario_itba
 
 * Puesta en marcha:
   
-  Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar
+  Ir a la carpeta donde se descargó el repositorio y en la consola de anaconda ejecutar:
 
 ```cmd
 python starter.py
